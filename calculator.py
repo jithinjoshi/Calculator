@@ -7,6 +7,73 @@ e = Entry(cal, width=60, borderwidth=5, justify="right", border=15, bg="#3ee838"
 e.grid(row=0, column=0, columnspan=4, padx=20, pady=20)
 
 
+
+
+
+def button_click(number):
+    current = e.get()
+    e.delete(0, END)
+    e.insert(0, str(current) + str(number))
+
+
+def button_clear():
+    e.delete(0, END)
+
+
+def button_add():
+    first_number = e.get()
+    global f_num
+    global math
+    math = "addition"
+    f_num = int(first_number)
+    e.delete(0, END)
+
+
+def button_equal():
+    second_number = e.get()
+    global s_num
+    s_num = int(second_number)
+    e.delete(0, END)
+    if math == "addition":
+        e.insert(0, f_num + s_num)
+
+    if math == "subtraction":
+        e.insert(0, f_num - s_num)
+
+    if math == "multiplication":
+        e.insert(0, f_num * s_num)
+
+    if math == "division":
+        e.insert(0, f_num / s_num)
+
+
+def button_sub():
+    first_number = e.get()
+    global f_num
+    global math
+    math = "subtraction"
+    f_num = int(first_number)
+    e.delete(0, END)
+
+
+def button_mul():
+    first_number = e.get()
+    global f_num
+    global math
+    math = "multiplication"
+    f_num = int(first_number)
+    e.delete(0, END)
+
+
+def button_div():
+    first_number = e.get()
+    global f_num
+    global math
+    math = "division"
+    f_num = int(first_number)
+    e.delete(0, END)
+
+    
 # Define Buttons
 button1 = Button(cal, text="1", padx=40, pady=20, fg="black", font=("arial", 13, "bold"), activebackground="#e3e01e",command=lambda:button_click(1))
 button2 = Button(cal, text="2", padx=40, pady=20, fg="black", font=("arial", 13, "bold"),  activebackground="#e3e01e", command=lambda:button_click(2))
