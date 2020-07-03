@@ -73,6 +73,7 @@ def button_div():
     e.delete(0, END)
 
 
+
 # Define Buttons
 button1 = Button(cal, text="1", padx=40, pady=20, fg="black", font=("arial", 13, "bold"), activebackground="#e3e01e",
                  command=lambda: button_click(1))
@@ -96,15 +97,15 @@ button0 = Button(cal, text="0", padx=40, pady=20, fg="black", font=("arial", 13,
                  command=lambda: button_click(0))
 button_add = Button(cal, text="+", padx=40, pady=20, fg="black", font=("arial", 13, "bold"), activebackground="#e3e01e",
                     command=button_add)
-button_sub = Button(cal, text="-", padx=40, pady=20, fg="black", font=("arial", 13, "bold"), activebackground="#e3e01e",
+button_sub = Button(cal, text="-", padx=42, pady=20, fg="black", font=("arial", 13, "bold"), activebackground="#e3e01e",
                     command=button_sub)
 button_mul = Button(cal, text="x", padx=40, pady=20, fg="black", font=("arial", 13, "bold"), activebackground="#e3e01e",
                     command=button_mul)
-button_div = Button(cal, text="/", padx=40, pady=20, fg="black", font=("arial", 13, "bold"), activebackground="#e3e01e",
+button_div = Button(cal, text="/", padx=42, pady=20, fg="black", font=("arial", 13, "bold"), activebackground="#e3e01e",
                     command=button_div)
 button_equal = Button(cal, text="=", padx=40, pady=20, fg="black", font=("arial", 13, "bold"),
                       activebackground="#e3e01e", command=button_equal)
-button_clear = Button(cal, text="C", padx=37, pady=15, fg="black", font=("arial", 13, "bold"), bg="red",
+button_clear = Button(cal, text="C", padx=40, pady=20, fg="black", font=("arial", 13, "bold"), bg="red",
                       activebackground="#e3e01e", command=button_clear)
 
 
